@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kim Linktree</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+    <title>Kim Maddox | Adventure Guide & Tech Enthusiast</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <style>
         body {
             font-family: 'Poppins', sans-serif;
@@ -13,52 +13,62 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            background: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+            background: linear-gradient(45deg, #3a1c71, #d76d77, #ffaf7b);
             margin: 0;
             padding: 20px;
             box-sizing: border-box;
+            color: #333;
         }
         .container {
             text-align: center;
-            background: rgba(255, 255, 255, 0.9);
+            background: rgba(255, 255, 255, 0.95);
             padding: 40px;
             border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
             max-width: 500px;
             width: 100%;
         }
         .profile-img {
-            width: 150px;
-            height: 150px;
+            width: 180px;
+            height: 180px;
             border-radius: 50%;
             object-fit: cover;
             margin-bottom: 20px;
             border: 5px solid white;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+        .profile-img:hover {
+            transform: scale(1.05);
         }
         h1 {
+            font-family: 'Montserrat', sans-serif;
             margin-bottom: 10px;
-            color: #333;
+            color: #3a1c71;
+            font-size: 2.5em;
         }
         .bio {
             margin-bottom: 30px;
             color: #666;
+            font-size: 1.1em;
+            line-height: 1.6;
         }
         .link {
             display: block;
             margin: 15px 0;
             padding: 15px;
-            background-color: #007bff;
+            background-color: #3a1c71;
             color: white;
             text-decoration: none;
             border-radius: 10px;
             transition: all 0.3s ease;
             font-weight: 600;
-            box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+            box-shadow: 0 5px 15px rgba(58, 28, 113, 0.3);
         }
         .link:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(0, 123, 255, 0.4);
+            box-shadow: 0 8px 20px rgba(58, 28, 113, 0.4);
+            background-color: #4a2c81;
         }
         .link i {
             margin-right: 10px;
@@ -67,71 +77,84 @@
             margin-top: 30px;
         }
         .social-icons a {
-            color: #333;
+            color: #3a1c71;
             font-size: 24px;
             margin: 0 10px;
-            transition: color 0.3s ease;
+            transition: all 0.3s ease;
         }
         .social-icons a:hover {
-            color: #007bff;
-        }
-        @media (max-width: 480px) {
-            .container {
-                padding: 30px;
-            }
-            .profile-img {
-                width: 120px;
-                height: 120px;
-            }
+            color: #d76d77;
+            transform: translateY(-3px);
         }
         .github-projects {
-            margin-top: 20px;
+            margin-top: 30px;
         }
         .github-projects h2 {
-            color: #333;
+            color: #3a1c71;
+            font-family: 'Montserrat', sans-serif;
         }
         .github-projects ul {
             list-style-type: none;
             padding-left: 0;
         }
         .github-projects ul li {
-            background-color: #007bff;
+            background-color: #d76d77;
             color: white;
             margin: 10px 0;
-            padding: 10px;
+            padding: 15px;
             border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+            box-shadow: 0 5px 15px rgba(215, 109, 119, 0.3);
             transition: all 0.3s ease;
         }
         .github-projects ul li:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(0, 123, 255, 0.4);
+            box-shadow: 0 8px 20px rgba(215, 109, 119, 0.4);
+            background-color: #e77d87;
         }
         .github-projects ul li a {
             color: white;
             text-decoration: none;
             font-weight: 600;
+            display: block;
         }
         .github-projects ul li a:hover {
             text-decoration: underline;
+        }
+        @media (max-width: 480px) {
+            .container {
+                padding: 30px;
+            }
+            .profile-img {
+                width: 150px;
+                height: 150px;
+            }
+            h1 {
+                font-size: 2em;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <img src="https://ibb.co/jJh2Cwn" alt="Profile Picture" class="profile-img">
+        <img src="https://ibb.co/jJh2Cwn" alt="Kim Maddox" class="profile-img">
         <h1>Kim Maddox</h1>
-        <p class="bio">Outdoor Adventure Guide | Entrepreneur  | Tech, Art and Life Enthusiast</p>
+        <p class="bio">Outdoor Adventure Guide | Entrepreneur | Tech, Art and Life Enthusiast</p>
         <a href="https://mxmdgames.github.io/KimLinks/resume" class="link"><i class="fas fa-file-alt"></i>My Resume</a>
+        <a href="https://www.youtube.com/@chainsawdogs3089/videos" class="link"><i class="fab fa-youtube"></i>My YouTube Channel</a>
+        
+        <div class="github-projects">
+            <h2>Featured Project</h2>
+            <ul>
+                <li><a href="https://mxmdgames.github.io/stonkz/" target="_blank"><i class="fas fa-chart-line"></i> Stock Application</a></li>
+            </ul>
+        </div>
         
         <div class="social-icons">
-        <a href="https://www.youtube.com/@chainsawdogs3089/videos" class="link"><i class="fas fa-file-alt"></i>My Youtube</a>
-        </div>
-        <div class="github-projects">
-            <h2>GitHub Project</h2>
-            <ul>
-                <li><a href="https://mxmdgames.github.io/stonkz/" target="_blank">Stock Application</a></li>
-            </ul>
+            <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
         </div>
     </div>
 </body>
