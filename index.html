@@ -205,17 +205,18 @@
 
         .moon-container {
             position: fixed;
-            bottom: 20px;
-            left: 20px;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
             z-index: -1;
         }
 
         .moon {
+            position: absolute;
             background-image: linear-gradient(30deg, #13233f, #0d1829);
-            width: 256px;
-            height: 256px;
             border-radius: 50%;
-            position: relative;
         }
 
         .moon::before {
@@ -227,7 +228,51 @@
             width: 100%;
             border-radius: 50%;
             z-index: -1;
-            animation: 3.2s cresent linear infinite alternate;
+            animation: cresent linear infinite alternate;
+        }
+
+        .moon-1 {
+            width: 256px;
+            height: 256px;
+            bottom: 20px;
+            left: 20px;
+        }
+
+        .moon-1::before {
+            animation-duration: 3.2s;
+        }
+
+        .moon-2 {
+            width: 128px;
+            height: 128px;
+            top: 10%;
+            right: 15%;
+        }
+
+        .moon-2::before {
+            animation-duration: 4s;
+        }
+
+        .moon-3 {
+            width: 96px;
+            height: 96px;
+            bottom: 15%;
+            right: 10%;
+        }
+
+        .moon-3::before {
+            animation-duration: 3.5s;
+        }
+
+        .moon-4 {
+            width: 64px;
+            height: 64px;
+            top: 20%;
+            left: 10%;
+        }
+
+        .moon-4::before {
+            animation-duration: 4.5s;
         }
 
         @keyframes cresent {
@@ -247,9 +292,21 @@
         }
 
         @media (max-width: 768px) {
-            .moon {
+            .moon-1 {
                 width: 160px;
                 height: 160px;
+            }
+            .moon-2 {
+                width: 96px;
+                height: 96px;
+            }
+            .moon-3 {
+                width: 64px;
+                height: 64px;
+            }
+            .moon-4 {
+                width: 48px;
+                height: 48px;
             }
         }
 
@@ -282,7 +339,10 @@
 </head>
 <body>
     <div class="moon-container">
-        <div class="moon"></div>
+        <div class="moon moon-1"></div>
+        <div class="moon moon-2"></div>
+        <div class="moon moon-3"></div>
+        <div class="moon moon-4"></div>
     </div>
 
     <div class="container">
