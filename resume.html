@@ -3,163 +3,375 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Warren Kimbly Maddox - Professional Profile</title>
+    <title>Warren Kimbly Maddox - Professional Resume</title>
     <style>
+        /* Modern, clean, professional styling */
         body {
-            font-family: 'Georgia', serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            color: #2c3e50;
-            max-width: 800px;
+            color: #333;
+            max-width: 850px;
             margin: 0 auto;
-            padding: 20px;
-            background-color: #e8f3e8;
+            padding: 30px;
+            background-color: #f9f9f9;
         }
+        
+        .resume-container {
+            background-color: white;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            padding: 40px;
+        }
+        
         header {
-            background-image: url('https://4kwallpapers.com/images/wallpapers/forest-landscape-trees-scenery-fog-foggy-forest-nature-5k-5696.jpg');
-            background-size: cover;
-            background-position: center;
-            color: #fff;
             text-align: center;
-            padding: 100px 1rem;
-            border-radius: 5px 5px 0 0;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-            position: relative;
+            padding-bottom: 30px;
+            border-bottom: 2px solid #2c3e50;
+            margin-bottom: 30px;
         }
-        header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            background: rgba(0,0,0,0.3);
-            border-radius: 5px 5px 0 0;
+        
+        h1 {
+            color: #2c3e50;
+            font-size: 32px;
+            margin-bottom: 10px;
+            font-weight: 700;
+            letter-spacing: 1px;
         }
-        header * {
-            position: relative;
-            z-index: 1;
-        }
-        h1, h2 {
-            color: #4CAF50;
-        }
-        .section {
-            background-color: rgba(255,255,255,0.8);
-            margin-bottom: 20px;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        .job {
-            margin-bottom: 15px;
-        }
-        .job h3 {
-            color: #1e4e1e;
-            margin-bottom: 5px;
-        }
-        .job p {
-            margin: 0;
-        }
+        
         .contact-info {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
+            font-size: 16px;
+            color: #555;
             margin-top: 10px;
         }
+        
         .contact-info a {
-            color: #fff;
+            color: #3498db;
             text-decoration: none;
         }
+        
         .contact-info a:hover {
             text-decoration: underline;
         }
+        
+        h2 {
+            color: #2c3e50;
+            font-size: 22px;
+            margin-top: 35px;
+            margin-bottom: 20px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #eee;
+            font-weight: 600;
+        }
+        
+        .job {
+            margin-bottom: 25px;
+            page-break-inside: avoid;
+        }
+        
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            margin-bottom: 8px;
+        }
+        
+        .job-title {
+            font-weight: 600;
+            color: #2c3e50;
+            font-size: 18px;
+        }
+        
+        .company {
+            font-weight: 600;
+            color: #3498db;
+        }
+        
+        .location {
+            font-style: italic;
+            color: #666;
+        }
+        
+        .dates {
+            color: #7f8c8d;
+            font-size: 15px;
+            font-weight: 500;
+        }
+        
         ul {
+            padding-left: 20px;
+            margin-top: 8px;
+        }
+        
+        li {
+            margin-bottom: 6px;
+            line-height: 1.5;
+        }
+        
+        .education-item {
+            margin-bottom: 15px;
+        }
+        
+        .certifications {
+            margin-top: 25px;
+        }
+        
+        .cert-list {
             list-style-type: none;
             padding-left: 0;
         }
-        ul li:before {
-            content: "🍃 ";
-            margin-right: 5px;
+        
+        .cert-list li {
+            margin-bottom: 10px;
+        }
+        
+        .cert-list li:before {
+            content: "✓ ";
+            color: #27ae60;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+        
+        /* Print styles */
+        @media print {
+            body {
+                padding: 0;
+                background-color: white;
+            }
+            
+            .resume-container {
+                box-shadow: none;
+                padding: 20px;
+            }
+            
+            a {
+                color: #333;
+                text-decoration: none;
+            }
+            
+            .no-print {
+                display: none;
+            }
+        }
+        
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+            
+            .resume-container {
+                padding: 25px;
+            }
+            
+            .job-header {
+                flex-direction: column;
+            }
+            
+            .dates {
+                margin-top: 5px;
+            }
+            
+            h1 {
+                font-size: 28px;
+            }
+            
+            h2 {
+                font-size: 20px;
+            }
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Warren Kimbly Maddox</h1>
-        <div class="contact-info">
-            <a href="tel:5022211804">(502) 221-1804</a>
-            <a href="mailto:Warrenmadx@icloud.com">Warrenmadx@icloud.com</a>
+    <div class="resume-container">
+        <header>
+            <h1>WARREN KIMBLY MADDOX</h1>
+            <div class="contact-info">
+                <span>(502) 221-1804</span> | 
+                <a href="mailto:Warrenmadx@icloud.com">Warrenmadx@icloud.com</a>
+            </div>
+        </header>
+        
+        <section class="professional-experience">
+            <h2>PROFESSIONAL EXPERIENCE</h2>
+            
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <span class="job-title">Interpretive Ranger</span> | 
+                        <span class="company">The Parklands of Floyds Fork</span>
+                    </div>
+                    <div class="dates">January 2026 – Present</div>
+                </div>
+                <div class="location">Louisville, KY | Seasonal</div>
+                <ul>
+                    <li>Develop interpretive educational programs on wildlife, plant life, and ecosystems</li>
+                    <li>Lead field trips, camps, guided hikes, and educational events for visitors of all ages</li>
+                    <li>Write articles and blog content for The Parklands website</li>
+                </ul>
+            </div>
+            
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <span class="job-title">Ski School Instructor (Snowboard)</span> | 
+                        <span class="company">Wolf Creek Ski Area</span>
+                    </div>
+                    <div class="dates">December 2024 – March 2025</div>
+                </div>
+                <div class="location">Pagosa Springs, CO | Seasonal</div>
+                <ul>
+                    <li>Taught snowboarding fundamentals and technique to beginner and intermediate students of all ages</li>
+                    <li>Led group lessons and private instruction while maintaining safety and positive learning environments</li>
+                    <li>Assisted with equipment fitting and mountain orientation</li>
+                </ul>
+            </div>
+            
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <span class="job-title">Software & IT Consultant (Python)</span> | 
+                        <span class="company">American Sound</span>
+                    </div>
+                    <div class="dates">Contract</div>
+                </div>
+                <div class="location">Louisville, KY</div>
+                <ul>
+                    <li>Designed, wrote, and sold custom Python software to generate QR codes for conference rooms and boardroom AV systems</li>
+                    <li>Improved room usability and reduced staff setup time through automated QR-based workflows</li>
+                    <li>Worked directly with stakeholders to scope requirements and deliver a production-ready solution</li>
+                </ul>
+            </div>
+            
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <span class="job-title">Web Developer & IT Support</span> | 
+                        <span class="company">Freelance / Zoup</span>
+                    </div>
+                    <div class="dates">Contract</div>
+                </div>
+                <div class="location">Louisville, KY</div>
+                <ul>
+                    <li>Developed and maintained websites for small business clients, handling front-end layout and content updates</li>
+                    <li>Provided on-site IT support for Zoup, including computer upgrades, virus and malware removal, and system optimization</li>
+                    <li>Assisted with configuration and troubleshooting of security camera and access control systems</li>
+                </ul>
+            </div>
+            
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <span class="job-title">Creative 3D Intern</span> | 
+                        <span class="company">Recursive Digital</span>
+                    </div>
+                    <div class="dates">June 2024 – August 2024</div>
+                </div>
+                <div class="location">London, UK (Remote) | Summer Internship</div>
+                <ul>
+                    <li>Developed real-time 3D visual experiences and interactive prototypes using TouchDesigner</li>
+                    <li>Created generative visuals and data-driven art installations</li>
+                    <li>Collaborated with creative technologists to optimize GPU-based rendering pipelines</li>
+                </ul>
+            </div>
+            
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <span class="job-title">Outdoor Adventure Guide</span> | 
+                        <span class="company">Miraval Resorts (Hyatt)</span>
+                    </div>
+                    <div class="dates">October 2022 – January 2024</div>
+                </div>
+                <div class="location">Catalina, AZ | Seasonal</div>
+                <ul>
+                    <li>Led mountain biking, hiking, and roped events for resort guests</li>
+                    <li>Served as lead guide for beginner to advanced mountain biking clinics and trail rides</li>
+                    <li>Guided roped events and hikes across multiple Tucson-area trail systems</li>
+                </ul>
+            </div>
+            
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <span class="job-title">Glacier Guide</span> | 
+                        <span class="company">MICA Guides</span>
+                    </div>
+                    <div class="dates">Summer 2018 – 2022</div>
+                </div>
+                <div class="location">Sutton, AK | Seasonal</div>
+                <ul>
+                    <li>Guided technical trekking and ice climbing on the Matanuska Glacier via helicopter access</li>
+                    <li>Assessed and mitigated hazards in remote wilderness environments</li>
+                    <li>Built and managed ropes, anchors, and mobile glacier camps</li>
+                    <li>Guided NASA Jet Propulsion Laboratory teams on and off the glacier</li>
+                </ul>
+            </div>
+            
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <span class="job-title">Crew Leader</span> | 
+                        <span class="company">Arizona Conservation Corps (AZCC)</span>
+                    </div>
+                    <div class="dates">September 2018 – February 2019</div>
+                </div>
+                <div class="location">Tucson, AZ | Seasonal</div>
+                <ul>
+                    <li>Led and managed a seven-person chainsaw crew on the Gila Watershed Project</li>
+                    <li>Removed invasive species and conducted habitat restoration work</li>
+                </ul>
+            </div>
+            
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <span class="job-title">Recreation Attendant</span> | 
+                        <span class="company">Blue Moon Canoe & Kayak of Kentucky</span>
+                    </div>
+                    <div class="dates">July 2016 – October 2016</div>
+                </div>
+                <div class="location">Louisville, KY | Seasonal</div>
+                <ul>
+                    <li>Loaded and unloaded kayaks and canoes and managed equipment logistics</li>
+                    <li>Drove shuttle buses and assisted with summer camp paddling trips</li>
+                    <li>Taught basic paddling skills to novice customers</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section class="education-certifications">
+            <h2>EDUCATION & CERTIFICATIONS</h2>
+            
+            <div class="education-item">
+                <div class="job-header">
+                    <div class="job-title">University of Louisville</div>
+                    <div class="dates">2011–2012</div>
+                </div>
+                <div class="location">Attended</div>
+            </div>
+            
+            <div class="education-item">
+                <div class="job-header">
+                    <div class="job-title">Ohio County High School</div>
+                    <div class="dates">2008–2011</div>
+                </div>
+                <div class="location">Graduate</div>
+            </div>
+            
+            <div class="certifications">
+                <ul class="cert-list">
+                    <li>Wilderness First Responder (WFR)</li>
+                    <li>CPR & AED Certified (2018 / 2020 / 2022)</li>
+                    <li>ACA Swiftwater Rescue — Certified 2019</li>
+                </ul>
+            </div>
+        </section>
+        
+        <div class="no-print" style="margin-top: 40px; text-align: center; font-size: 12px; color: #999;">
+            <p>Updated: March 2025 | Print using Ctrl+P for best results</p>
         </div>
-    </header>
-
-    <div class="section">
-        <h2>Professional Experience</h2>
-        <div class="job">
-            <h3>Interpretive Ranger - The Parklands of Floyds Fork</h3>
-            <p>Louisville, KY | Seasonal, January 2026 - present</p>
-            <p>Developed interpretive educational programs on wildlife, plant life, and ecosystems.</p>
-            <p>Led field trips, camps, guided hikes, and events for visitors of all ages.</p>
-            <p>Wrote articles and blog content for The Parklands website.</p>
-        </div>
-        <div class="job">
-            <h3>Ski School Instructor (snowboard) - Wolf Creek Ski Area</h3>
-            <p>Pagosa Springs, CO | Seasonal, December 2024 - March 2025</p>
-            <p>Taught skiing fundamentals and technique to beginner and intermediate students of all ages.</p>
-            <p>Led group lessons and provided private instruction, ensuring safety and positive learning experiences.</p>
-            <p>Assisted with equipment fitting and basic mountain orientation for new and experienced snowboarders.</p>
-        </div>
-        <div class="job">
-            <h3>Creative 3D Intern - Recursive Digital</h3>
-            <p>London, UK (Remote) | Summer Internship, June 2024 - August 2024</p>
-            <p>Developed real-time 3D visual experiences and interactive prototypes using TouchDesigner.</p>
-            <p>Assisted in creating generative visuals and data-driven art installations for digital media projects.</p>
-            <p>Collaborated with creative technologists to optimize GPU-based rendering pipelines and workflows.</p>
-        </div>
-        <div class="job">
-            <h3>Outdoor Adventure Guide - Miraval Resorts (Hyatt)</h3>
-            <p>Catalina, AZ | Seasonal, October 2022 - January 2024</p>
-            <p>Led mountain biking, hiking, and roped events as an outdoor adventure guide for Miraval Resorts.</p>
-            <p>Acted as a lead guide for beginner to advanced mountain biking clinics and single track trail rides.</p>
-            <p>Guided roped events and hikes on various trailheads in Tucson.</p>
-        </div>
-        <div class="job">
-            <h3>Glacier Guide - MICA Guides</h3>
-            <p>Sutton, AK | Seasonal, Summer 2018 - 2022</p>
-            <p>Guided technical trekking and ice climbing on the Matanuska Glacier via helicopter access.</p>
-            <p>Assessed and mitigated hazards in a wilderness environment.</p>
-            <p>Built ropes and anchors for ice climbing and rope access.</p>
-            <p>Worked remotely on a glacier for 7-9 day stints while managing a mobile glacier camp.</p>
-            <p>Guided NASA Jet Propulsion Labs on and off the glacier.</p>
-        </div>
-        <div class="job">
-            <h3>Crew Leader - Arizona Conservation Corps (AZCC)</h3>
-            <p>Tucson, AZ | Seasonal, September 2018 - February 2019</p>
-            <p>Led and managed a chainsaw crew of 7 for the Arizona Conservation Corps working on the Gila Watershed Project.</p>
-            <p>Tasked with cutting out invasives.</p>
-        </div>
-        <div class="job">
-            <h3>Interpretive Ranger - The Parklands of Floyds Fork</h3>
-            <p>Louisville, KY | Seasonal, April 2017 - October 2017</p>
-            <p>Developed interpretive educational programs on wildlife, plant life, and ecosystems.</p>
-            <p>Led field trips, camps, guided hikes, and events for visitors of all ages.</p>
-            <p>Wrote articles and blog content for The Parklands website.</p>
-        </div>
-        <div class="job">
-            <h3>Recreation Attendant - Blue Moon Canoe & Kayak of Kentucky</h3>
-            <p>Louisville, KY | Seasonal, July 2016 - October 2016</p>
-            <p>Loaded and unloaded kayaks and canoes, pulled and parked a boat trailer.</p>
-            <p>Drove a bus and shuttled customers, helped guide summer camp groups on paddling trips.</p>
-            <p>Taught basic paddling skills to inexperienced customers.</p>
-        </div>
-    </div>
-
-    <div class="section">
-        <h2>Education & Certifications</h2>
-        <ul>
-            <li>Wilderness First Responder (WFR) CPR & AED certified (2018/2020/2022)</li>
-            <li>ACA SwiftWater Rescue certified (2019)</li>
-            <li>Attended University of Louisville (2011-2012)</li>
-            <li>Ohio County High School graduate (2008-2011)</li>
-        </ul>
     </div>
 </body>
 </html>
